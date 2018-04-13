@@ -9,6 +9,6 @@ public class Worker extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce() + " " + GlobalConfig.WORKER_INTRO;
+        return super.baseIntroduce() + " " + GlobalConfig.WORKER_INTRO;
     }
 }

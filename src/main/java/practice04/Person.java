@@ -9,8 +9,11 @@ public class Person {
         this.name = name;
     }
 
-    public String introduce() {
+    public String baseIntroduce(){
         return "My name is " + name + ". I am " + age + " years old.";
+    }
+    public String introduce() {
+        return baseIntroduce();
     }
 
     public int getAge() {
