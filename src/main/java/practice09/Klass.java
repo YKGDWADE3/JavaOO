@@ -39,11 +39,7 @@ public class Klass {
 
     public void appendMember(Student student) {
         if (student != null ) {
-            if (student.getKlass() != null && student.getKlass().getNumber() != number) {
-                System.out.print(GlobalConfig.STUDENT_NOT_APPEND);
-            }else{
-                student.setKlass(new Klass(number));
-            }
+            student.setKlass(this);
         }
     }
 }
