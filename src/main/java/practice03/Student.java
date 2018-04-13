@@ -1,5 +1,7 @@
 package practice03;
 
+import configs.GlobalConfig;
+
 public class Student extends Person{
     private int klass;
 
@@ -14,7 +16,7 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return "I am a Student. I am at Class " + klass + ".";
+        return GlobalConfig.STUDENT_INTRO + " " + GlobalConfig.STUDENT_AT_CLASS + klass + ".";
     }
 
     public int getKlass() {

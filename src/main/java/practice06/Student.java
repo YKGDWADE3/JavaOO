@@ -16,7 +16,8 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce() + " " + GlobalConfig.STUDENT_INTRO + klass + ".";
+        return super.introduce() + " " + GlobalConfig.STUDENT_INTRO
+                + " " + GlobalConfig.STUDENT_AT_CLASS + klass + ".";
     }
 
     public Integer getKlass() {

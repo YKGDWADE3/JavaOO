@@ -17,17 +17,19 @@ public class Teacher extends Person{
 
     @Override
     public String introduce() {
-        return mKlass != null ? super.introduce() + " " + GlobalConfig.TEACHER_INTRO + mKlass.getNumber() + "."
-                : super.introduce() + " " + GlobalConfig.TEACHER_NO_CLASS_INTRO;
+        return mKlass != null ? super.introduce() + " " + GlobalConfig.TEACHER_INTRO + " "
+                + GlobalConfig.TEACH_CLASS + mKlass.getNumber() + "."
+                : super.introduce() + " " + GlobalConfig.TEACH_NO_CLASS;
     }
 
     public String introduceWith(Student student){
         if (student != null && student.getKlass() != null && mKlass != null) {
             if (student.getKlass().getNumber() == mKlass.getNumber()) {
-                return super.introduce() + " " + GlobalConfig.TEACHER_STU_INTRO + student.getName() + ".";
+                return super.introduce() + " " + GlobalConfig.TEACHER_INTRO + " "
+                        + GlobalConfig.TEACH_STU + student.getName() + ".";
             }
         }
-        return super.introduce() + " " + GlobalConfig.TEACHER_NO_STU_INTRO + student.getName() + ".";
+        return super.introduce() + " " + GlobalConfig.TEACHER_INTRO + " " + GlobalConfig.TEACH_NOT_STU + student.getName() + ".";
     }
 
     public Klass getKlass() {

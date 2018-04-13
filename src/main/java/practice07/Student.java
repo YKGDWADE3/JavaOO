@@ -2,6 +2,8 @@ package practice07;
 
 import configs.GlobalConfig;
 
+import javax.xml.bind.annotation.XmlElementDecl;
+
 public class Student extends Person{
     private Klass mKlass;
 
@@ -16,7 +18,8 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return super.introduce() + " " + GlobalConfig.STUDENT_INTRO + mKlass.getNumber() + ".";
+        return super.introduce() + " " + GlobalConfig.STUDENT_INTRO
+                + " " + GlobalConfig.STUDENT_AT_CLASS + mKlass.getNumber() + ".";
     }
 
     public Klass getKlass() {

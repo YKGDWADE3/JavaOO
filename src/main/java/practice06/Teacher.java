@@ -16,8 +16,9 @@ public class Teacher extends Person{
 
     @Override
     public String introduce() {
-        return klass == null ? super.introduce() + " " + GlobalConfig.TEACHER_NO_CLASS_INTRO
-                : super.introduce() + " " + GlobalConfig.TEACHER_INTRO + klass + ".";
+        return klass == null ? super.introduce() + " " + GlobalConfig.TEACH_NO_CLASS
+                : super.introduce() + " " + GlobalConfig.TEACHER_INTRO
+                + " " + GlobalConfig.TEACH_CLASS + klass + ".";
     }
 
     public Integer getKlass() {
