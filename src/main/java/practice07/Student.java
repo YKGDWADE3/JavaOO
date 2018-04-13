@@ -1,4 +1,29 @@
 package practice07;
 
-public class Student {
+import configs.GlobalConfig;
+
+public class Student extends Person{
+    private Klass mKlass;
+
+    public Student(String name, Integer age) {
+        super(name, age);
+    }
+
+    public Student(String name, Integer age, Klass klass) {
+        super(name, age);
+        mKlass = klass;
+    }
+
+    @Override
+    public String introduce() {
+        return super.introduce() + " " + GlobalConfig.STUDENT_INTRO + mKlass.getNumber() + ".";
+    }
+
+    public Klass getKlass() {
+        return mKlass;
+    }
+
+    public void setKlass(Klass klass) {
+        mKlass = klass;
+    }
 }
