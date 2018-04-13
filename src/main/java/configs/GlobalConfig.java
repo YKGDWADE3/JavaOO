@@ -16,5 +16,7 @@ public class GlobalConfig {
     public static final String TEACH_NO_CLASS = "I am a Teacher. I teach No Class.";
     public static final String TEACH_STU = "I teach ";
     public static final String TEACH_NOT_STU = "I don't teach ";
+    public static String TEACHER_KNOW_NEW_STU = "I am %s. I know %s has joined Class %d.\n";
+    public static String TEACHER_KNOW_NEW_LEADER = "I am %s. I know %s become Leader of Class %d.\n";
 
 }
